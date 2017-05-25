@@ -45,4 +45,4 @@ pipeline = Pipeline(estimators)
 #Cross Validation
 kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=seed)
 results = cross_val_score(pipeline, X, encoded_Y, cv=kfold)
-print('Standardized: %.2f%%, (%.2f%%)' %(results.mean()*100, resultsstd()*100))
+print('Standardized: %.2f%%, (%.2f%%)' %(results.mean()*100, results.std()*100))
