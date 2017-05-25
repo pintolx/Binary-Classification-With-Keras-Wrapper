@@ -46,3 +46,5 @@ pipeline = Pipeline(estimators)
 kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=seed)
 results = cross_val_score(pipeline, X, encoded_Y, cv=kfold)
 print('Standardized: %.2f%%, (%.2f%%)' %(results.mean()*100, results.std()*100))
+
+#Chaning the number of epochs to 300 imporoves the accuracy to 85% but also affects the standard deviation
